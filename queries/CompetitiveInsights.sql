@@ -11,14 +11,14 @@ SELECT
     pz.Zone AS pickup_zone,
     dz.Zone AS dropoff_zone,
     COUNT(*) AS total_trips
-FROM `nyc-yellow-trips.transformed_data.cleaned_and_filtered` t
-JOIN `nyc-yellow-trips.raw_yellowtrips.taxi_zone` pz 
+FROM `yellow-taxi-trips-2025.transformed_data.cleaned_and_filtered` t
+JOIN `yellow-taxi-trips-2025.row_yellowtrips.taxi_zone` pz 
     ON t.PULocationID = pz.LocationID
-JOIN `nyc-yellow-trips.raw_yellowtrips.taxi_zone` dz 
+JOIN `yellow-taxi-trips-2025.row_yellowtrips.taxi_zone` dz 
     ON t.DOLocationID = dz.LocationID
 GROUP BY trip_date, year, month, pickup_borough, dropoff_borough, pickup_zone, dropoff_zone;
 
-SELECT * FROM `views_fordashboard.trip_volume_by_borough` LIMIT 1000;
+SELECT * FROM `views_fordashboard.trip_volume_by_borough` LIMIT 100;
 
 
 
@@ -37,16 +37,16 @@ SELECT
     COUNT(*) AS total_trips,
     ROUND(AVG(t.total_amount), 2) AS avg_fare,
     ROUND(AVG(t.trip_distance), 2) AS avg_distance
-FROM `nyc-yellow-trips.transformed_data.cleaned_and_filtered` t
-JOIN `nyc-yellow-trips.raw_yellowtrips.taxi_zone` pz 
+FROM `yellow-taxi-trips-2025.transformed_data.cleaned_and_filtered` t
+JOIN `yellow-taxi-trips-2025.row_yellowtrips.taxi_zone` pz 
     ON t.PULocationID = pz.LocationID
-JOIN `nyc-yellow-trips.raw_yellowtrips.taxi_zone` dz 
+JOIN `yellow-taxi-trips-2025.row_yellowtrips.taxi_zone` dz 
     ON t.DOLocationID = dz.LocationID
 WHERE pz.Zone IN ('JFK Airport', 'LaGuardia Airport', 'Newark Airport') 
    OR dz.Zone IN ('JFK Airport', 'LaGuardia Airport', 'Newark Airport')
 GROUP BY trip_date, year, month, airport;
 
-SELECT * FROM `views_fordashboard.airport_trips_analysis` LIMIT 1000;
+SELECT * FROM `views_fordashboard.airport_trips_analysis` LIMIT 100;
 
 
 
@@ -68,12 +68,12 @@ SELECT
     END AS rate_code_description,
     COUNT(*) AS total_trips,
     ROUND(AVG(t.total_amount), 2) AS avg_fare
-FROM `nyc-yellow-trips.transformed_data.cleaned_and_filtered` t
-JOIN `nyc-yellow-trips.raw_yellowtrips.taxi_zone` pz 
+FROM `yellow-taxi-trips-2025.transformed_data.cleaned_and_filtered` t
+JOIN `yellow-taxi-trips-2025.row_yellowtrips.taxi_zone` pz 
     ON t.PULocationID = pz.LocationID
 GROUP BY year, month, pickup_borough, t.RateCodeID, rate_code_description;
 
-SELECT * FROM `views_fordashboard.rate_code_analysis` LIMIT 1000;
+SELECT * FROM `views_fordashboard.rate_code_analysis` LIMIT 100;
 
 
 -- Question 15: How long do trips typically take, and is there a trend of increasing or decreasing trip durations over time?
@@ -85,7 +85,7 @@ SELECT
     EXTRACT(HOUR FROM t.tpep_pickup_datetime) AS hour,
     ROUND(AVG(TIMESTAMP_DIFF(t.tpep_dropoff_datetime, t.tpep_pickup_datetime, MINUTE)), 2) AS avg_trip_duration_min,
     COUNT(*) AS total_trips
-FROM `nyc-yellow-trips.transformed_data.cleaned_and_filtered` t
+FROM `yellow-taxi-trips-2025.transformed_data.cleaned_and_filtered` t
 GROUP BY year, month, day, hour;
 
-SELECT * FROM `views_fordashboard.trip_duration_analysis` LIMIT 1000;
+SELECT * FROM `views_fordashboard.trip_duration_analysis` LIMIT 100;
