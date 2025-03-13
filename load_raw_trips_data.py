@@ -6,11 +6,11 @@ import io
 from datetime import UTC  # Import UTC explicitly
 
 # Set project-specific variables
-PROJECT_ID = "nyc-yellow-trips"
-BUCKET_NAME = f"{PROJECT_ID}-data-buckets"
+PROJECT_ID = "yellow-taxi-trips-2025"
+BUCKET_NAME = f"{PROJECT_ID}-data-bucket"
 GCS_FOLDER = "dataset/trips/"
 GCS_LOG_FOLDER = "from-git/logs/"
-TABLE_ID = f"{PROJECT_ID}.raw_yellowtrips.trips"
+TABLE_ID = f"{PROJECT_ID}.row_yellowtrips.trips"
 TEMP_TABLE_ID = f"{TABLE_ID}_temp" # Temporary table to load data without type constraints
 
 # Initialize BigQuery and GCS clients
