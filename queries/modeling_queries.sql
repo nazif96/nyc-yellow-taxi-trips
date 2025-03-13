@@ -48,8 +48,14 @@ SELECT * FROM `yellow-taxi-trips-2025.ml_dataset.preprocessed_train_data`;
 
 -- Training with AUTOML REGRESSOR
 CREATE OR REPLACE MODEL `yellow-taxi-trips-2025.ml_dataset.automl_model`
-  OPTIONS (model_type="AUTOML_REGRESSOR", enable_global_explain=TRUE, input_label_cols=["total_amount"])
+  OPTIONS (model_type="AUTOML_REGRESSOR", input_label_cols=["total_amount"])
 AS 
 SELECT * FROM `yellow-taxi-trips-2025.ml_dataset.preprocessed_train_data`;
+
+
+--  Query the model's global explanations (features important)
+SELECT *
+FROM ML.EXPLAIN_PREDICT(MODEL `yellow-taxi-trips-2025.ml_dataset.automl_model`,
+  (SELECT * FROM `yellow-taxi-trips-2025.ml_dataset.preprocessed_train_data`));
 
 
