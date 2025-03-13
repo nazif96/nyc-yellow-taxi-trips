@@ -5,11 +5,11 @@ import io
 from datetime import UTC  # Import UTC explicitly
 
 # Define project, dataset, and table details
-PROJECT_ID = "nyc-yellow-trips"
-RAW_TABLE = f"{PROJECT_ID}.raw_yellowtrips.trips"
+PROJECT_ID = "yellow-taxi-trips-2025"
+RAW_TABLE = f"{PROJECT_ID}.row_yellowtrips.trips"  # data brute table
 TRANSFORMED_TABLE = f"{PROJECT_ID}.transformed_data.cleaned_and_filtered"
 GCS_LOG_FOLDER = "from-git/logs/"
-BUCKET_NAME = f"{PROJECT_ID}-data-buckets"
+BUCKET_NAME = f"{PROJECT_ID}-data-bucket"
 
 # Initialize BigQuery and GCS clients
 client = bigquery.Client(project=PROJECT_ID, location="US")
