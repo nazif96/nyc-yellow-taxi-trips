@@ -3,7 +3,7 @@
 ![ELT](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/elt%2010.png)
 
 ## contexte  
-Bienvenue dans la construiction d'un `Pipeline de données optimiser` pour `L'analyse du marché` et optimiser le service de transport. 
+Bienvenue dans la construiction d'un `Pipeline ELT de données automatisé` pour `L'analyse du marché` et optimiser le service de transport. 
 
 ## 🎯 Objectifs 
 - Mise en place d'un pipeline ELT (Extract Load and Transform) optimisé et automatisé de données vers le Google Cloud Storage (GCP) 
@@ -18,7 +18,7 @@ Bienvenue dans la construiction d'un `Pipeline de données optimiser` pour `L'an
 4- Efficacité operationnelle 
 
 
-## 🗃️ Structure du ressource (depôt)
+## 🏗️ Structure du ressource (depôt)
 
 ```
 nyc-yellow-taxi-trips
@@ -54,7 +54,9 @@ nyc-yellow-taxi-trips
 
 Activez le cloudShell et cloud editeur 
 
-**configuration** 
+⚙️**configuration** 
+
+Via l'éditeur du cloud shell  
 
 - **Clonez** le depôt avec tous les ressources
 ```
@@ -80,7 +82,7 @@ pip install -r requirements.txt
 Téléchargement manuel d'un fichier `.parquet` puis importation local vers GCS suivit d'une anlyse exploratoire avec `exploratoire_data_analysis.py`
 pour amaloiration du script pour automatiser l'extraction des plusieurs fichiers. 
 
-2. Mise en place et execution du script d'extraction `download_taxi_data.py` pour l'extraction des données (2022- aujourd'hui) de cloud data center `https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page` vers Google Cloud Storage (GCS) 
+2. Mise en place et execution du script d'extraction `download_taxi_data.py` pour l'extraction des données (2022- aujourd'hui) de cloud data center `https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page` vers le service Cloud Storage (GCS)  du Google cloud platform 
 
 
 ![Extraction](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/extract_GCS.png)
@@ -95,6 +97,10 @@ pour amaloiration du script pour automatiser l'extraction des plusieurs fichiers
 
 ### III - Transformation des données (transform)
 
+**Transformation** des données dans Big query via le script `transform_trips_data.py` pour créer un *Data Mart* `transformed_data.cleaned_and_filtered` qui regroupoe des données transformées et filtrées selon les questions et les besoins du métier. 
 
+![transformation](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/trans_Bq.png)
+
+![transformation](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/trans_Bq2.png)
 
 ## 👤
