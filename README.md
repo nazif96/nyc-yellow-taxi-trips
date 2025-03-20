@@ -17,7 +17,7 @@ Bienvenue dans la construiction d'un `Pipeline ELT de données automatisé` pour
 2- comportement des clients
 
 3- Analyse financière
- 
+
 4- Efficacité operationnelle 
 
 
@@ -78,7 +78,7 @@ Source.venv/bin/activate
 pip install -r requirements.txt 
 ```
 
-### I- Extraction des données (extract)
+### I- Extraction des données (Extract)
 
 1. Création de buckets dans GCS puis la configuration 
 
@@ -98,7 +98,7 @@ pour amaloiration du script pour automatiser l'extraction des plusieurs fichiers
 
 ![load](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/Bq_load2.png)
 
-### III - Transformation des données (transform)
+### III - Transformation des données (Transform)
 
 **Transformation** des données dans Big query via le script `transform_trips_data.py` pour créer un *Data Mart* `transformed_data.cleaned_and_filtered` qui regroupoe des données transformées et filtrées selon les questions et les besoins du métier. 
 
@@ -107,5 +107,11 @@ pour amaloiration du script pour automatiser l'extraction des plusieurs fichiers
 ![transformation](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/trans_Bq2.png)
 
 
-##
+## 🚀Automatisation et deploiement de la pipeline
+
+Automatisation de pipeline dans le  **google cloud composer** via le fichier `elt_dag_pipeline.py` qui met en place le **DAG Airflow** qui orchestre un pipeline ELT sur BigQuery en exécutant des scripts stockés sur Google Cloud Storage (GCS). puis le deploiement du DAG pipeline via environnement cloud du GC composer et monitoring via **Airflow UI**
+![Auto_elt](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/workflows_GC.png)
+
+![Graph](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/Graph_DAG.png) 
+
 ## 👤
