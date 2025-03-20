@@ -73,7 +73,7 @@ Source.venv/bin/activate
 pip install -r requirements.txt 
 ```
 
-### I- Extraction (extract)
+### I- Extraction des données (extract)
 
 1. Création de buckets dans GCS puis la configuration 
 
@@ -86,12 +86,15 @@ pour amaloiration du script pour automatiser l'extraction des plusieurs fichiers
 ![Extraction](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/extract_GCS.png)
 
 
-### II - Chargement (Load)
+### II - Chargement des données (Load)
 
-**Chargement** des données de **GCS** vers **Big query**  via l'execution du script d'extraction `load_raw_trips_data.py` via le cloud Shell.
+**Chargement** des données de **GCS** vers **Big query**  via l'execution du script de chargement `load_raw_trips_data.py` via le cloud Shell.
 ![load](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/Bq_load1.png)
 
 ![load](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/Bq_load2.png)
+
+### III - Transformation des données (transform)
+
 
 
 ## 👤
