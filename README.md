@@ -109,7 +109,9 @@ pour amaloiration du script pour automatiser l'extraction des plusieurs fichiers
 
 ## 🚀Automatisation et deploiement de la pipeline
 
-Automatisation de pipeline dans le  **google cloud composer** via le fichier `elt_dag_pipeline.py` qui met en place le **DAG Airflow** qui orchestre un pipeline ELT sur BigQuery en exécutant des scripts stockés sur Google Cloud Storage (GCS). puis le deploiement du DAG pipeline via environnement cloud du GC composer et monitoring via **Airflow UI**
+Automatisation de pipeline dans le  **google cloud composer** via le fichier `elt_dag_pipeline.py` qui met en place le **DAG Airflow** qui orchestre un pipeline ELT sur BigQuery en exécutant des scripts stockés sur Google Cloud Storage (GCS). puis le deploiement du DAG pipeline via environnement cloud du GC composer et monitoring via
+ **Airflow UI**.
+
 ![Auto_elt](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/workflows_GC.png)
 
 ![Graph](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/Graph_DAG.png) 
