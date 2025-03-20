@@ -2,7 +2,7 @@
 
 ![ELT](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/elt%2010.png)
 
-## contexte  
+## Contexte  
 Bienvenue dans la construiction d'un `Pipeline ELT de données automatisé` pour `L'analyse du marché` et optimiser le service de transport. 
 
 ## 🎯 Objectifs 
