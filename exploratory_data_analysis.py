@@ -8,7 +8,7 @@ spark = SparkSession.builder \
 
 # %%
 # Load the Parquet file into a DataFrame
-file_path = "data/yellow_tripdata_2023-12.parquet"
+file_path = "data/yellow_tripdata_2024-12.parquet"
 yellow_tripdata_df = spark.read.parquet(file_path)
 
 # %%

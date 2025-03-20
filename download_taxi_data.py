@@ -42,7 +42,7 @@ def download_histo_data():
     current_year = datetime.now().year
 
     try:
-        for year in range(2020, current_year + 1):
+        for year in range(2022, current_year + 1):
             for month in range(1, 13):
                 file_name = f"yellow_tripdata_{year}-{month:02d}.parquet"
                 gcs_path = f"{GCS_FOLDER}{file_name}"
