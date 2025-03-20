@@ -13,8 +13,11 @@ Bienvenue dans la construiction d'un `Pipeline ELT de données automatisé` pour
 
 ## Problèmatiques Business 
 1- Demande du marché et saisonnalité 
+
 2- comportement des clients
-3- Analyse financière 
+
+3- Analyse financière
+ 
 4- Efficacité operationnelle 
 
 
@@ -103,4 +106,6 @@ pour amaloiration du script pour automatiser l'extraction des plusieurs fichiers
 
 ![transformation](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/trans_Bq2.png)
 
+
+##
 ## 👤
