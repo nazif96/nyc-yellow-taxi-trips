@@ -116,4 +116,3 @@ Automatisation de pipeline dans le  **google cloud composer** via le fichier `el
 
 ![Graph](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/Graph_DAG.png) 
 
-## 👤
