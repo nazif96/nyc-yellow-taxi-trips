@@ -3,7 +3,7 @@
 ![ELT](https://github.com/nazif96/nyc-yellow-taxi-trips/blob/main/images/elt%2010.png)
 
 ## Contexte  
-Bienvenue dans la construiction d'un `Pipeline ELT de données automatisé` pour `L'analyse du marché` et optimiser le service de transport. 
+Bienvenue dans la construction d'un `Pipeline ELT de données automatisé` pour `L'analyse du marché` et optimiser le service de transport. 
 
 ## 🎯 Objectifs 
 - Mise en place d'un pipeline ELT (Extract Load and Transform) optimisé et automatisé de données vers le Google Cloud Storage (GCP) 
